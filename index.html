@@ -13,28 +13,51 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<button type="button" class="btn btn-default navbar-btn" aria-label="New File" data-toggle="modal" data-target="#confirm"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></button>
-			<a href="#" id="download" target="_blank" download="document.txt" class="btn btn-default navbar-btn" aria-label="Save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></a>
+			<a href="#" target="_blank" download="document.txt" class="btn btn-default navbar-btn download" aria-label="Save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></a>
 			<!--a href="#" id="open" class="btn btn-default navbar-btn">Open</a-->
-			<!--a href="#" id="help" class="button">Help</a-->
+			<button type="button" class="btn btn-default navbar-btn" aria-label="Help" data-toggle="modal" data-target="#help">?</button>
 		</div>
 	</nav>
-	<textarea class="box" unselectable="on"></textarea>
+	<textarea class="box" unselectable="on" placeholder="Start Typing!"></textarea>
 
-	<!-- Modal -->
 	<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	        <h4 class="modal-title" id="myModalLabel">New Document</h4>
 	      </div>
 	      <div class="modal-body">
 	        Are you sure you want to create a new document? The existing document will be lost!
 	      </div>
 	      <div class="modal-footer">
-	      	<a href="#" id="download" target="_blank" download="document.txt" class="btn btn-default">Save</a>
+	      	<a href="#" target="_blank" download="document.txt" class="btn btn-default download">Save the File</a>
+   	        <button id="new" type="button" class="btn btn-primary" data-dismiss="modal">Create New File</button>
 	        <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
-   	        <button id="new" type="button" class="btn btn-primary" data-dismiss="modal">New</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Help!</h4>
+	      </div>
+	      <div class="modal-body">
+	        <h1 class="text-center">The Immutable Writer</h1>
+	        <h3 class="text-center">A Typewriter Emulator</h3>
+	        <p class="text-center"><em>Because Perfect is the Enemy of Productive</em></p>
+	        <p>Have you ever wanted to <em>just write</em>, but gotten wrapped up in formatting, spelling, grammar? If you'd been typing on a typewriter, you'd simply have to accept what you'd already typed without correction. The Immutable Writer is a writing environment designed to emulate that finality.</p>
+	        <p>You cannot edit. You cannot cut and paste. You cannot go back. It's like every character gets punched into the page the moment you type it.</p>
+	        <p>So just relax! Type a <em>first draft</em>, download it, and then open it up in normal text editor to revise it.</p>
+	        <p>The Immutable Writer was inspired by <a href="http://lesswrong.com/lw/w8/engelbart_insufficiently_recursive/">this Blog Post</a>.</p>
+	        <p class="text-center">The Immutable Writer is a product of <a href="http://futurecensus.github.io/"><span id="future">Future</span><span id="census">Census</span></a>.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Got it.</button>
 	      </div>
 	    </div>
 	  </div>

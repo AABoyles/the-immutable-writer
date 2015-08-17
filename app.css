@@ -35,3 +35,16 @@ nav{
 	top:10px;
 	right:10px;
 }
+#future { 
+  color: orange !important; 
+}
+
+#census {
+  color: black !important;
+}
+
+#future, #census {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}

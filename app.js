@@ -32,12 +32,15 @@ $(function(){
         $(".box").val("");
     });
     
-    $("#download").click(function(){
-        $(this).attr("href", "data:application/text;charset=utf-8,"+encodeURI($(".box").val()));
+    $(".download").mousedown(function(){
+        var content = $(".box").val();
+        $(this).attr("href", "data:application/text;charset=utf-8,"+encodeURI(content));
     });
 
     if(Cookies.get("currentText")){
         $(".box").val(Cookies.get("currentText"));
     }
+
+    $(".box").get(0).focus();
 
 });
